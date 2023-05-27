@@ -1,0 +1,21 @@
+document.querySelector('.cross').style.display='none';
+document.querySelector('.hamburger').addEventListener("click",()=>{
+    document.querySelector('.sidebar').classList.toggle('sidebargo')
+    if (document.querySelector('.sidebar').classList.contains('sidebargo')){
+        document.querySelector('.cross').style.display='none';
+        document.querySelector('.hamburger').style.display='inline';
+    }
+    else{
+        setTimeout(()=>{
+        document.querySelector('.cross').style.display='inline';
+    },600)
+    setTimeout(()=>{
+        document.querySelector('.hamburger').style.display='none';
+    },600)
+    }
+})
+document.querySelector('.cross').addEventListener("click",()=>{
+    document.querySelector('.cross').style.display='none';
+    document.querySelector('.hamburger').style.display='inline';
+    document.querySelector('.sidebar').classList.toggle('sidebargo')
+})
